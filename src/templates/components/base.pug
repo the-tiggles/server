@@ -15,7 +15,7 @@ html(lang='en')
           meta(name='og:image:height' content='150')
           meta(name='og:url' content='https://rd2l.gg')
         link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css')
-        link(rel='stylesheet' type='text/css' href='/assets/css/style.css')
+        link(rel='stylesheet' type='text/css' href='/assets/css/master.css')
         if user && user.theme
           link(rel='stylesheet' type='text/css' href='https://unpkg.com/bulmaswatch/' + user.theme + '/bulmaswatch.min.css')
         link(rel='icon' type='image/png' href='/assets/notext.png')
@@ -24,42 +24,67 @@ html(lang='en')
           
   block bodyFull
     body.layout-default
+      .body-overlay
       block body
+        //- block header
+        //-   section.hero
+        //-     div.hero-head
+        //-       nav.navbar
+        //-         div.navbar-brand
+        //-           a.navbar-item(href='/')
+        //-             span.icon
+        //-               i.fa.fa-lg.fa-home
+        //-           if user
+        //-             a.is-hidden-desktop.navbar-item(href='/profile/' + user.steamId).text-icon
+        //-               img.circle(src=user.avatar)
+        //-               if user.activityCheckRequired
+        //-                 i.fa.fa-exclamation-circle.activity-check
+        //-           div.navbar-burger.burger(data-target='seal-menu')
+        //-             span
+        //-             span
+        //-             span
+        //-         div.navbar-menu#seal-menu
+        //-           div.navbar-start
+        //-             a.navbar-item(href='/seasons') Seasons
+        //-             a.navbar-item(href='/divisions') Divisions
+        //-             a.navbar-item(href='/register') Register
+        //-           div.navbar-end
+        //-             if user
+        //-               a.navbar-item.is-hidden-touch(href='/profile/' + user.steamId).text-icon
+        //-                 span= user.displayName
+        //-                   if user.activityCheckRequired
+        //-                     i.fa.fa-exclamation-circle.activity-check
+        //-                 img.circle(src=user.avatar)
+        //-               a.navbar-item(href='/logout') Log out
+        //-             else
+        //-               a.navbar-item(href='/auth/steam').has-icon
+        //-                 span.icon.is-small
+        //-                   i.fab.fa-steam
+        //-                 span &nbsp;Log in
+
         block header
-          section.hero
-            div.hero-head
-              nav.navbar
-                div.navbar-brand
-                  a.navbar-item(href='/')
-                    span.icon
-                      i.fa.fa-lg.fa-home
-                  if user
-                    a.is-hidden-desktop.navbar-item(href='/profile/' + user.steamId).text-icon
-                      img.circle(src=user.avatar)
-                      if user.activityCheckRequired
-                        i.fa.fa-exclamation-circle.activity-check
-                  div.navbar-burger.burger(data-target='seal-menu')
-                    span
-                    span
-                    span
-                div.navbar-menu#seal-menu
-                  div.navbar-start
-                    a.navbar-item(href='/seasons') Seasons
-                    a.navbar-item(href='/divisions') Divisions
-                    a.navbar-item(href='/register') Register
-                  div.navbar-end
-                    if user
-                      a.navbar-item.is-hidden-touch(href='/profile/' + user.steamId).text-icon
-                        span= user.displayName
-                          if user.activityCheckRequired
-                            i.fa.fa-exclamation-circle.activity-check
-                        img.circle(src=user.avatar)
-                      a.navbar-item(href='/logout') Log out
-                    else
-                      a.navbar-item(href='/auth/steam').has-icon
-                        span.icon.is-small
-                          i.fab.fa-steam
-                        span &nbsp;Log in
+          header.sticky-header
+            a.logo(href="/").bg-img
+              img(src="/assets/css/images/brand/logo.svg", alt="")
+            button.hamburger
+              span
+              span
+              span
+            .cta-wrapper
+              a.cta-btn(href="/register") REGISTER
+              if user
+                a(href="/logout") Log Out
+                a(href="/profile/" + user.steamId).text-icon
+                  img.circle(src=user.avatar)
+              else
+                a(href="/auth/steam").has-icon
+                  span.icon.is-small
+                    img(src="/assets/css/images/ui/icons/steam.svg", alt="steam logo")
+                  span  &nbsp;Log In
+
+
+
+        block homeHero
         block contentFull
           section.section
             div
@@ -154,3 +179,5 @@ html(lang='en')
         });
       }
     })();
+  script(src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
+  script(src='/assets/js/helper-min.js')
