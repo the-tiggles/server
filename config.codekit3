@@ -622,6 +622,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/src/assets/css/images/ui/icons/steam-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/assets/css/images/ui/icons/steam-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/src/assets/css/images/ui/icons/steam.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2462,6 +2472,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/src/templates/components/base.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/templates/components/sidecar.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/src/templates/components/sidecar.html",
 		"oF": 0,
 		"oS": 0
 		},

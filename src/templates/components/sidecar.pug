@@ -1,0 +1,18 @@
+extends base.pug
+
+block sidecar 
+   #sidecar
+      div.sidecar-wrapper
+         span.close
+         if user
+            div.player-wrapper
+               div.badge-icon
+                  img.circle(src=user.avatar)
+               div.name-logout
+                  a(href="/profile/" + user.steamId).text-icon
+                  a(href="/logout") Log Out
+         else
+            a(href="/auth/steam").has-icon
+            span.icon.is-small
+               img(src="/assets/css/images/ui/icons/steam-white.svg", alt="steam logo")
+            span  &nbsp;Log In
