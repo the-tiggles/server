@@ -7,8 +7,10 @@
 		display: block;
 		z-index: 9999;
 		width: 95vw;
+		max-width: 1200px;
+		margin: 0 auto;
 		left: 50%;
-		transform: translateX(-50%);
+		// transform: translateX(-50%);
 		height: 450px;
 		.bg-img {
 			position: absolute;
@@ -17,6 +19,9 @@
 			background-repeat: no-repeat;
 			transform: scaleX(-1);
 			opacity: .2;
+		}
+		.close {
+			position: absolute;
 		}
 		.jugg {
 			left: 0;
@@ -41,7 +46,40 @@
 				justify-content: space-between;
 				margin: 50px auto 0 auto;
 				width: 60%;
+				.list {
+					h3 {
+						color: white;
+						margin-bottom: 30px;
+					}
+					li {
+						a {
+							color: white;
+
+							&:hover {
+								color: red;
+							}
+						}
+					}
+				}
 			}
 		}
+	}
+}
+
+h3 {
+	position: relative;
+	font-weight: 900;
+	margin-bottom: 25px;
+	letter-spacing: .8px;
+	font-size: 20px;
+	&:after {
+		content: "";
+		width: 50px;
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+		height: 3px;
+		background: $red;
+		
 	}
 }

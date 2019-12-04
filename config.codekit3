@@ -652,6 +652,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/src/assets/css/images/ui/icons/window-close.png": {
+		"ft": 32768,
+		"iS": 631,
+		"oA": 0,
+		"oAP": "/src/assets/css/images/ui/icons/window-close.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/src/assets/css/images/ui/wallpapers/bloodseeker.jpg": {
 		"ft": 16384,
 		"iS": 153657,

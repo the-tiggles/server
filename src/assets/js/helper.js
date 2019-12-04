@@ -17,6 +17,7 @@ $(".bg-img").each(function() {
   }
 })
 
+
 var slider = tns({
 
    autoplay: true,
@@ -38,5 +39,14 @@ var slider = tns({
 
 
 
+
+
+$(window).on("resize load", function() {
+  if ($(window).width() > 768) {
+    $("#sidecar").css("margin-left", "calc(-"+($("#sidecar").outerWidth())+"px/2)");
+  } else {
+    $("#sidecar").css("margin-left", "calc(-"+($("#sidecar").outerWidth())+"px/2)");
+  }
+});
 
 });
