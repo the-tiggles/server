@@ -1,3 +1,35 @@
+/* ====================== Typography ====================== */
+
+
+$lato: 'lato', sans-serif;
+$mont: 'Montserrat', sans-serif;
+
+// lato weights
+//
+// 100 - thin
+// 300 - light
+// 400 - regular
+// 700 - bold
+// 900 - black
+
+// mont weights
+//
+// 200 - extra light
+// 300 - light
+// 400 - regular
+// 700 - bold
+// 900 - black
+
+
+
+h1 {
+   font-family: $lato;
+}
+
+h2 {
+   font-family: $lato;
+}
+
 h3 {
    position: relative;
    font-weight: 900;
@@ -16,3 +48,13 @@ h3 {
 
    }
 }
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {}
+
+
