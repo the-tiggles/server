@@ -31,12 +31,14 @@ html(lang='en')
 
         block sidecar
           #sidecar
-            span.close
+            span.close.bg-img
+              img(src="/assets/css/images/ui/icons/window-close.svg", alt="")
             span.jugg.bg-img
               img(src="/assets/css/images/ui/cutouts/jugg.png", alt="")
             span.spirit.bg-img
               img(src="/assets/css/images/ui/cutouts/earthspirit.png", alt="")
             div.sidecar-wrapper
+                
               
               if user
                   div.player-wrapper

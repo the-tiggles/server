@@ -37,6 +37,18 @@ var slider = tns({
    autoplayButtonOutput: false
 });
 
+  $(".sticky-header button.hamburger").on("click", function () {
+    $(this).addClass('active');
+    $(".body-overlay, #sidecar, #sidecar .close").addClass('active');
+    $('body').addClass('locked');
+  });
+
+  $("#sidecar .close, .body-overlay").on('click', function () {
+    $(this).removeClass('active');
+    $(".body-overlay, #sidecar, #sidecar .close").removeClass('active');
+    $('body').removeClass('locked');
+  })
+
 
 
 

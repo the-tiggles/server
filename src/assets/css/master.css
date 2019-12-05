@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,800,900&display=swap");
+h3 {
+  position: relative;
+  font-weight: 900;
+  margin-bottom: 25px;
+  letter-spacing: .8px;
+  font-size: 20px; }
+  h3:after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    background: #B93026; }
+
 .disbanded {
   text-decoration: line-through; }
 
@@ -2686,57 +2701,6 @@ a, a:visited, a:hover, a:focus, input, input:hover {
   float: left; }
 
 /*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
-#sidecar {
-  position: fixed;
-  background-color: #031826; }
-  @media (min-width: 768px) {
-    #sidecar {
-      top: 0;
-      display: block;
-      z-index: 9999;
-      width: 95vw;
-      max-width: 1200px;
-      margin: 0 auto;
-      left: 50%;
-      height: 450px; }
-      #sidecar .bg-img {
-        position: absolute;
-        bottom: 0;
-        background-size: contain;
-        background-repeat: no-repeat;
-        transform: scaleX(-1);
-        opacity: .2; }
-      #sidecar .close {
-        position: absolute; }
-      #sidecar .jugg {
-        left: 0;
-        height: 460px;
-        width: 530px;
-        background-position: 80px bottom; }
-      #sidecar .spirit {
-        right: 0;
-        width: 700px;
-        height: 500px;
-        background-position: -280px 160px; }
-      #sidecar .sidecar-wrapper {
-        position: relative;
-        padding: 50px 25px;
-        height: 100%; }
-        #sidecar .sidecar-wrapper .nav-wrap {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          justify-content: space-between;
-          margin: 50px auto 0 auto;
-          width: 60%; }
-          #sidecar .sidecar-wrapper .nav-wrap .list h3 {
-            color: white;
-            margin-bottom: 30px; }
-          #sidecar .sidecar-wrapper .nav-wrap .list li a {
-            color: white; }
-            #sidecar .sidecar-wrapper .nav-wrap .list li a:hover {
-              color: red; } }
-
 h3 {
   position: relative;
   font-weight: 900;

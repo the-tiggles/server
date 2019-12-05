@@ -1,0 +1,18 @@
+h3 {
+   position: relative;
+   font-weight: 900;
+   margin-bottom: 25px;
+   letter-spacing: .8px;
+   font-size: 20px;
+
+   &:after {
+      content: "";
+      width: 50px;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      height: 3px;
+      background: $red;
+
+   }
+}
