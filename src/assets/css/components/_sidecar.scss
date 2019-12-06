@@ -1,3 +1,4 @@
+
 #sidecar {
 	position: fixed;
 	background-color: $darkblue;
@@ -14,7 +15,7 @@
 		// transform: translateX(-50%);
 		height: 450px;
 
-		.bg-img:not(.close) {
+		>.bg-img:not(.close) {
 			position: absolute;
 			bottom: 0;
 			background-size: contain;
@@ -49,7 +50,7 @@
 			cursor: pointer;
 
 			&.active {
-				animation: topComin .3s ease .6s;
+				animation: topComin .3s ease .3s;
 				animation-fill-mode: forwards;
 			}
 		}
@@ -71,8 +72,54 @@
 			padding: 50px 25px;
 			height: 100%;
 
+			.player-wrapper {
+				position: absolute;
+				top: 25px;
+				left: 25px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				a .badge-icon {
+					width: 80px;
+					height: 80px;
+					border-radius: 50%;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+
+				.name-logout {
+					a {
+						margin-left: 20px;
+						display: block;
+						color: white;
+
+						&.username span {
+							font-size: 30px;
+							font-weight: 900;
+						}
+
+						&.logout {
+							font-family: $mont;
+							font-weight: 400;
+						}
+					}
+				}
+			}
+
 			a.has-icon {
 				display: inline-block;
+				display: flex;
+
+				.icon {
+					+span {
+						color: white;
+						font-weight: 700;
+						margin-left: 5px;
+						letter-spacing: 1px;
+					}
+				}
 			}
 
 			.nav-wrap {
@@ -80,7 +127,7 @@
 				flex-direction: row;
 				flex-wrap: nowrap;
 				justify-content: space-between;
-				margin: 50px auto 0 auto;
+				margin: 150px auto 0 auto;
 				width: 60%;
 
 				.list {

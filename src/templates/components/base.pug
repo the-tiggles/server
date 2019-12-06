@@ -42,14 +42,16 @@ html(lang='en')
               
               if user
                   div.player-wrapper
-                    div.badge-icon
-                        img.circle(src=user.avatar)
+                    a(href="/profile/" + user.steamId)
+                      div.badge-icon.bg-img
+                        img(src=user.avatar)
                     div.name-logout
-                        a(href="/profile/" + user.steamId).text-icon
-                        a(href="/logout") Log Out
+                      a(href="/profile/" + user.steamId).username 
+                        span= user.displayName
+                      a(href="/logout").logout Log Out
               else
                   a(href="/auth/steam").has-icon
-                    span.icon.is-small
+                    span.icon.is-medium
                       img(src="/assets/css/images/ui/icons/steam-white.svg", alt="steam logo")
                     span  &nbsp;Log In
               .nav-wrap

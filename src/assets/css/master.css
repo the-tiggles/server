@@ -2756,19 +2756,19 @@ input:hover {
       margin: 0 auto;
       left: 50%;
       height: 450px; }
-      #sidecar .bg-img:not(.close) {
+      #sidecar > .bg-img:not(.close) {
         position: absolute;
         bottom: 0;
         background-size: contain;
         background-repeat: no-repeat;
         transform: scaleX(-1);
         opacity: .2; }
-        #sidecar .bg-img:not(.close).jugg {
+        #sidecar > .bg-img:not(.close).jugg {
           left: 0;
           height: 460px;
           width: 530px;
           background-position: 80px bottom; }
-        #sidecar .bg-img:not(.close).spirit {
+        #sidecar > .bg-img:not(.close).spirit {
           right: 0;
           width: 700px;
           height: 500px;
@@ -2784,7 +2784,7 @@ input:hover {
         height: 29px;
         cursor: pointer; }
         #sidecar .close.active {
-          animation: topComin .3s ease .6s;
+          animation: topComin .3s ease .3s;
           animation-fill-mode: forwards; }
     @keyframes topComin {
       0% {
@@ -2795,14 +2795,44 @@ input:hover {
         position: relative;
         padding: 50px 25px;
         height: 100%; }
+        #sidecar .sidecar-wrapper .player-wrapper {
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          #sidecar .sidecar-wrapper .player-wrapper a .badge-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; }
+          #sidecar .sidecar-wrapper .player-wrapper .name-logout a {
+            margin-left: 20px;
+            display: block;
+            color: white; }
+            #sidecar .sidecar-wrapper .player-wrapper .name-logout a.username span {
+              font-size: 30px;
+              font-weight: 900; }
+            #sidecar .sidecar-wrapper .player-wrapper .name-logout a.logout {
+              font-family: "Montserrat", sans-serif;
+              font-weight: 400; }
         #sidecar .sidecar-wrapper a.has-icon {
-          display: inline-block; }
+          display: inline-block;
+          display: flex; }
+          #sidecar .sidecar-wrapper a.has-icon .icon + span {
+            color: white;
+            font-weight: 700;
+            margin-left: 5px;
+            letter-spacing: 1px; }
         #sidecar .sidecar-wrapper .nav-wrap {
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
           justify-content: space-between;
-          margin: 50px auto 0 auto;
+          margin: 150px auto 0 auto;
           width: 60%; }
           #sidecar .sidecar-wrapper .nav-wrap .list h3 {
             color: white;
