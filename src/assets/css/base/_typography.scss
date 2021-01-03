@@ -1,0 +1,60 @@
+/* ====================== Typography ====================== */
+
+
+$lato: 'lato', sans-serif;
+$mont: 'Montserrat', sans-serif;
+
+// lato weights
+//
+// 100 - thin
+// 300 - light
+// 400 - regular
+// 700 - bold
+// 900 - black
+
+// mont weights
+//
+// 200 - extra light
+// 300 - light
+// 400 - regular
+// 700 - bold
+// 900 - black
+
+
+
+h1 {
+   font-family: $lato;
+}
+
+h2 {
+   font-family: $lato;
+}
+
+h3 {
+   position: relative;
+   font-weight: 900;
+   margin-bottom: 25px;
+   letter-spacing: .8px;
+   font-size: 20px;
+
+   &:after {
+      content: "";
+      width: 50px;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      height: 3px;
+      background: $red;
+
+   }
+}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {}
+
+

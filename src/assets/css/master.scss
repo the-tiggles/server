@@ -1,0 +1,37 @@
+
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,800,900&display=swap');
+
+
+// BASE //
+@import "base/general";
+@import "base/colors";
+@import "base/typography";
+@import "base/reset";
+
+// Import External
+@import "external/animate";
+@import "external/tiny-slider";
+
+
+// GLOBAL LAYOUT //
+@import "components/flex-nav";
+@import "components/sidecar";
+@import "components/search";
+
+// universal pieces under components
+@import "components/header";
+@import "components/footer";
+
+// COMPONENTS //
+@import "components/buttons";
+
+
+// PAGES //
+@import "pages/home";
+@import "pages/default";
+
+
+

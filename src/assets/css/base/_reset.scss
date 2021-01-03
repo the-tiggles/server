@@ -1,0 +1,302 @@
+.disbanded {
+	text-decoration: line-through;
+}
+
+figure.hide-overflow {
+	overflow: hidden;
+}
+
+.table.is-middle-aligned {
+	th {
+		vertical-align: middle;
+	}
+
+	td {
+		vertical-align: middle;
+	}
+}
+
+.has-image {
+	display: flex;
+	align-items: center;
+
+	figure {
+		margin-right: 0.3em;
+	}
+}
+
+.has-icon {
+	display: flex;
+	align-items: center;
+
+	.icon {
+		margin-right: 0.1em;
+	}
+}
+
+.title.has-icon {
+	.icon {
+		margin-right: 0.3em;
+	}
+}
+
+.no-margin {
+	margin-right: 0 !important;
+}
+
+.image.is-team-logo {
+	width: 50px;
+	height: 30px;
+}
+
+.image.is-team-logo-medium {
+	width: 100px;
+	height: 60px;
+}
+
+.image.is-hero {
+	width: 600px;
+}
+
+.image.is-roster {
+	width: 64px;
+	height: 64px;
+}
+
+.tiny-text {
+	font-size: 0.6rem;
+}
+
+.tooltip {
+	position: relative;
+	border-bottom: 1px dotted black;
+
+	.tooltiptext {
+		visibility: hidden;
+		width: 120px;
+		background-color: $background_color_1;
+		color: $color_1;
+		text-align: center;
+		padding: 5px 0;
+		border-radius: 6px;
+		position: absolute;
+		z-index: 1;
+		width: 400px;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -200px;
+	}
+
+	&:hover {
+		.tooltiptext {
+			visibility: visible;
+		}
+	}
+
+	&:focus {
+		.tooltiptext {
+			visibility: visible;
+		}
+
+		outline: none;
+		outline: none;
+
+		* {
+			outline: none;
+		}
+	}
+
+	&:focus-within {
+		.tooltiptext {
+			visibility: visible;
+		}
+	}
+}
+
+tr.cutoff {
+	td {
+		border-bottom: 1px solid red;
+	}
+}
+
+img.circle {
+	border-radius: 50%;
+}
+
+img.notable {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.text-icon {
+	span {
+		vertical-align: middle;
+		display: inline-block;
+		padding-right: 32px;
+	}
+
+	img {
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+
+.navbar-item {
+	.activity-check {
+		color: $color_2;
+		margin-left: 0.4em;
+		padding-bottom: 0.25em;
+	}
+}
+
+.icon-box {
+	* {
+		margin: 0 0.2em;
+	}
+}
+
+.rules {
+	ol {
+		list-style-position: outside;
+		margin-left: 1.5em;
+
+		ul {
+			list-style-position: outside;
+			list-style-type: circle;
+			margin-left: 1.5em;
+
+			ul {
+				list-style-type: square;
+			}
+		}
+	}
+}
+
+.is-wide-scroll {
+	overflow: auto;
+}
+
+@media screen and (max-width: 1007px) {
+	.text-icon {
+		span {
+			padding-right: 16px;
+		}
+	}
+}
+
+@media screen and (max-width:768px) {
+	.has-image {
+		flex-direction: column;
+		text-align: center;
+
+		.image.is-team-logo-medium {
+			width: 250px;
+			height: 150px;
+			margin-bottom: 36px;
+		}
+	}
+}
+
+
+
+
+
+/* ====================== Base Styles ====================== */
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	background-color: $red;
+}
+
+body {
+	background: $white;
+	margin: 0;
+	font-size: 16px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	font-synthesis: none;
+	-moz-font-feature-settings: 'kern';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+	font-family: 'lato', sans-serif;
+}
+
+body.locked {
+	overflow: hidden;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* if using a sticky nav, use this to add space above anchor links to go below navbar */
+*:target:before {
+	display: block;
+	content: "";
+	height: 90px;
+	margin: -90px 0 0;
+}
+
+*:target:before:focus {
+	outline: none !important;
+}
+
+*:target:focus {
+	outline: none;
+}
+
+hr {}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+input,
+input:hover {
+	-webkit-transition: all .33s ease;
+	-moz-transition: all .33s ease;
+	-o-transition: all .33s ease;
+	transition: all .33s ease;
+	text-decoration: none;
+}

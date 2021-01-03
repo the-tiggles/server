@@ -1,8 +1,13 @@
 .DS_STORE
 node_modules
 .env
+<<<<<<< HEAD
 .env.sh
 .idea
 .vscode
 .project
 *.sublime-*
+=======
+.idea
+.env.sh
+>>>>>>> 784632a8efce629971314d3812b1b3fef009d696

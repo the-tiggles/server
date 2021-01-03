@@ -15,6 +15,7 @@ html(lang='en')
           meta(name='og:image:height' content='150')
           meta(name='og:url' content='https://rd2l.gg')
         link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css')
+<<<<<<< HEAD
         if user && user.theme
           link(rel='stylesheet' type='text/css' href='https://unpkg.com/bulmaswatch@0.7.5/' + user.theme + '/bulmaswatch.min.css')
         link(rel='icon' type='image/png' href='/assets/notext.png')
@@ -192,35 +193,40 @@ html(lang='en')
               margin-bottom: 36px;
             }
           }
+=======
+       
+        //- if user && user.theme
+          //- link(rel='stylesheet' type='text/css' href='https://unpkg.com/bulmaswatch/' + user.theme + '/bulmaswatch.min.css')
+        link(rel='stylesheet' type='text/css' href='/assets/css/master.css')
+        link(rel='icon' type='image/png' href='/assets/notext.png')
+        script(defer src='https://use.fontawesome.com/releases/v5.0.9/js/all.js' integrity='sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl' crossorigin='anonymous')
+        style(type='text/css').
+
+  
+>>>>>>> 784632a8efce629971314d3812b1b3fef009d696
   block bodyFull
     body.layout-default
       block body
-        block header
-          section.hero
-            div.hero-head
-              nav.navbar
-                div.navbar-brand
-                  a.navbar-item(href='/')
-                    span.icon
-                      i.fa.fa-lg.fa-home
-                  if user
-                    a.is-hidden-desktop.navbar-item(href='/profile/' + user.steamId).text-icon
-                      img.circle(src=user.avatar)
-                      if user.activityCheckRequired
-                        i.fa.fa-exclamation-circle.activity-check
-                  div.navbar-burger.burger(data-target='seal-menu')
-                    span
-                    span
-                    span
-                div.navbar-menu#seal-menu
-                  div.navbar-start
-                    a.navbar-item(href='/seasons') Seasons
-                    a.navbar-item(href='/divisions') Divisions
-                    a.navbar-item(href='/register') Register
-                  div.navbar-end
-                    if user
-                      a.navbar-item.is-hidden-touch(href='/profile/' + user.steamId).text-icon
+        block sidecar
+          #sidecar
+            span.close.bg-img
+              img(src="/assets/css/images/ui/icons/window-close.svg", alt="")
+            span.jugg.bg-img
+              img(src="/assets/css/images/ui/cutouts/jugg.png", alt="")
+            span.spirit.bg-img
+              img(src="/assets/css/images/ui/cutouts/earthspirit.png", alt="")
+            div.sidecar-wrapper
+                
+              
+              if user
+                  div.player-wrapper
+                    a(href="/profile/" + user.steamId)
+                      div.badge-icon.bg-img
+                        img(src=user.avatar)
+                    div.name-logout
+                      a(href="/profile/" + user.steamId).username 
                         span= user.displayName
+<<<<<<< HEAD
                           if user.activityCheckRequired
                             i.fa.fa-exclamation-circle.activity-check
                         img.circle(src=user.avatar)
@@ -303,6 +309,144 @@ html(lang='en')
                       registered® trademarks of their respective holders. Use of
                       them does not imply any affiliation with or endorsement by
                       them.
+=======
+                      a(href="/logout").logout Log Out
+              else
+                  a(href="/auth/steam").has-icon
+                    span.icon.is-medium
+                      img(src="/assets/css/images/ui/icons/steam-white.svg", alt="steam logo")
+                    span  &nbsp;Log In
+              .nav-wrap
+                .list
+                  h3 Quick Links
+                  ul
+                    li 
+                      a(href="/register") Register
+                    li 
+                      a(href="/divisions") Divisions
+                    li
+                      a(href="/seasons") Seasons
+                    li
+                      a(href="/bracket?season=bLikBZrRH") Playoff Bracket
+                .list
+                  h3 Info
+                  ul
+                    li
+                      a(href="/rules") League Rules
+                    li 
+                      a(href="/inhouserules") Inhouse Rules
+                .list
+                  h3 External Links
+                  ul
+                    li
+                      a(href="https://rd2l-fantasy.com/") Fantasy League
+                    li
+                      a(href="https://eu.rd2l.gg/") EU Division
+          .body-overlay      
+          block header
+            header.sticky-header
+              a.logo(href="/").bg-img
+                img(src="/assets/css/images/brand/logo.svg", alt="RD2L Logo")
+              button.hamburger
+                span
+                span
+                span
+              .cta-wrapper
+                a.cta-btn(href="/register") REGISTER
+                if user
+                  a(href="/logout") Log Out
+                  a(href="/profile/" + user.steamId).text-icon
+                    img.circle(src=user.avatar)
+                else
+                  a(href="/auth/steam").has-icon
+                    span.icon.is-small
+                      img(src="/assets/css/images/ui/icons/steam-white.svg", alt="steam logo")
+                    span  &nbsp;Log In
+
+
+
+          block homeHero
+          block contentFull
+            section.section
+              div
+                block content
+          block footer
+            footer.footer
+              div.container.is-fullhd
+                div.columns
+                  div.column
+                    div.level
+                      div.level-item
+                        h5.title.is-5 Contact
+                    div.level
+                      div.level-item
+                        ul
+                          li
+                            a(href='https://discord.gg/y4NkFrw' alt='Join the RD2L Discord' target='_blank') Join Discord
+                          li
+                            a(href='mailto:admins@rd2l.gg') Email
+                          li
+                            a(href='https://github.com/redditdota2league/server/issues/new') Report a bug
+                          li
+                            a(href='https://www.reddit.com/r/redditdota2league/submit') Provide feedback
+                  div.column
+                    div.level
+                      div.level-item
+                        h5.title.is-5 Resources
+                    div.level
+                      div.level-item
+                        ul
+                          li
+                            a(href='https://eu.rd2l.gg') EU Division Website
+                          li
+                            a(href='/rules') League rules
+                          li
+                            a(href='/inhouserules') Inhouse rules
+                          li
+                            a(href='https://rd2l-fantasy.com/') Fantasy league
+                          li
+                            a(href='/bracket?season=bLikBZrRH') Playoff Bracket
+                  div.column
+                    div.level
+                      div.level-item
+                        h5.title.is-5 Built using
+                    div.level
+                      div.level-item
+                        ul
+                          li
+                            a(href='http://bulma.io/') Bulma
+                          li
+                            a(href='http://expressjs.com/') Express
+                          li
+                            a(href='http://passportjs.org/') Passport
+                          li
+                            a(href='https://github.com/seishun/node-steam') Steam for Node.js
+                          li
+                            a(href='https://github.com/Arcana/node-dota2') node-dota2
+                div.columns
+                  div.column.has-text-centered
+                    span.icon-box
+                      a(href='https://www.twitch.tv/redditdota2league')
+                        span.icon
+                          i.fab.fa-lg.fa-twitch
+                      a(href='https://github.com/redditdota2league/server')
+                        span.icon
+                          i.fab.fa-lg.fa-github
+                      a(href='https://www.reddit.com/r/redditdota2league')
+                        span.icon
+                          i.fab.fa-lg.fa-reddit-alien
+                      a(href='https://discord.gg/y4NkFrw')
+                        span.icon
+                          i.fab.fa-lg.fa-discord
+                div.columns
+                  div.column.has-text-centered
+                    p
+                      small.
+                        All product and company names are trademarks™ or
+                        registered® trademarks of their respective holders. Use of
+                        them does not imply any affiliation with or endorsement by
+                        them.
+>>>>>>> 784632a8efce629971314d3812b1b3fef009d696
   script(type='text/javascript').
     (function() {
       var burgers = Array.prototype.slice.call(document.querySelectorAll('.burger'), 0);
@@ -317,3 +461,5 @@ html(lang='en')
         });
       }
     })();
+  script(src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
+  script(src='/assets/js/helper-min.js')

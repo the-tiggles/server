@@ -1,35 +1,15 @@
 extends components/base.pug
 
 block title
-  title RD2L: R Dota 2 League
+  title RD2L: Reddit Dota 2 League
 
-<<<<<<< HEAD
 block append header
-  div.logo-container
-    figure.biglogo
-      img(src="/assets/rd2l-lame.png")
-    figure.littlelogo
-      img(src="/assets/notext.png")
-=======
-
-
-
-
-
-
-block homeHero
-   section.home-hero
-      div.hero-slider
-         div.single-slide.bg-img
-            img(src='/assets/css/images/ui/wallpapers/bloodseeker.jpg' alt='')
-         div.single-slide.bg-img
-            img(src='/assets/css/images/ui/wallpapers/huskar.jpg' alt='')
-      div.reddit-posts
-         h2 Latest Post
-         div.wrapper
-            ul
-
->>>>>>> 784632a8efce629971314d3812b1b3fef009d696
+  div.hero-body.has-text-centered
+    div.container
+      div.columns
+        div.column
+          figure.image.is-hero.hide-overflow.is-inline-block
+            img(src='/assets/rd2l-lame.png')
 
 block contentFull
   section.section
@@ -41,12 +21,12 @@ block contentFull
               h5.title.is-5.has-icon
                 span.icon
                   i.fa.fa-info-circle
-                | General Inf
+                | General Info
           div.level
             div.level-item
               ul
                 li Individual signups
-                li Teams built via draåft
+                li Teams built via draft
                 li 8 week BO2 regular season
                 li Top teams make playoffs
         div.column

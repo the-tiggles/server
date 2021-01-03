@@ -1,0 +1,13 @@
+.cta-btn {
+	background-color: #10AFD7;
+	color: white;
+	padding: 5px 25px;
+	display: inline-block;
+	border-radius: 25px;
+	height: fit-content;
+	transition: all .33s ease;
+	font-weight: 700;
+	&:hover {
+		background: $darkblue;
+	}
+}
