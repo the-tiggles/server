@@ -5,7 +5,7 @@ RUN apt-get update && \
 
 WORKDIR /src
 
-COPY package.json /src/
+COPY package.json /src/package.json
 
 RUN npm install --production
 
